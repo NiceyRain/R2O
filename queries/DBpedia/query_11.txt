@@ -1,0 +1,4 @@
+MATCH (n0:Node {id: "3388857"})-[:wikiPageWikiLink]->(n2:Node) RETURN n0.id, n2.id
+MATCH (n1:Node)-[:subject]->(n3:Node) RETURN n1.id, n3.id
+MATCH (n0:Node)-[:wikiPageWikiLink]->(n2:Node), (n2:Node)-[:subject]->(n3:Node) RETURN n0.id, n2.id, n3.id
+MATCH (n1:Node)-[:subject]->(n3:Node), (n2:Node)-[:subject]->(n3:Node) RETURN n1.id, n2.id, n3.id 

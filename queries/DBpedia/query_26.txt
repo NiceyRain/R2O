@@ -1,0 +1,4 @@
+MATCH (n0:Node {id: "141001"})-[:starring]->(n2:Node) RETURN n0.id, n2.id
+MATCH (n1:Node)-[:order]->(n3:Node) RETURN n1.id, n3.id
+MATCH (n0:Node)-[:starring]->(n2:Node), (n2:Node)-[:wikiPageWikiLink]->(n3:Node) RETURN n0.id, n2.id, n3.id
+MATCH (n1:Node)-[:order]->(n3:Node), (n2:Node)-[:wikiPageWikiLink]->(n3:Node) RETURN n1.id, n2.id, n3.id 
